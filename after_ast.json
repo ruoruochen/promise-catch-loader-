@@ -1,0 +1,242 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 141,
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "start": 0,
+      "end": 141,
+      "expression": {
+        "type": "CallExpression",
+        "start": 0,
+        "end": 141,
+        "callee": {
+          "type": "MemberExpression",
+          "start": 0,
+          "end": 103,
+          "object": {
+            "type": "CallExpression",
+            "start": 0,
+            "end": 97,
+            "callee": {
+              "type": "MemberExpression",
+              "start": 0,
+              "end": 35,
+              "object": {
+                "type": "CallExpression",
+                "start": 0,
+                "end": 30,
+                "callee": {
+                  "type": "MemberExpression",
+                  "start": 0,
+                  "end": 15,
+                  "object": {
+                    "type": "ThisExpression",
+                    "start": 0,
+                    "end": 4
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "start": 5,
+                    "end": 15,
+                    "name": "axiosFetch"
+                  },
+                  "computed": false,
+                  "optional": false
+                },
+                "arguments": [
+                  {
+                    "type": "MemberExpression",
+                    "start": 16,
+                    "end": 29,
+                    "object": {
+                      "type": "ThisExpression",
+                      "start": 16,
+                      "end": 20
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "start": 21,
+                      "end": 29,
+                      "name": "formData"
+                    },
+                    "computed": false,
+                    "optional": false
+                  }
+                ],
+                "optional": false
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 31,
+                "end": 35,
+                "name": "then"
+              },
+              "computed": false,
+              "optional": false
+            },
+            "arguments": [
+              {
+                "type": "ArrowFunctionExpression",
+                "start": 36,
+                "end": 96,
+                "id": null,
+                "expression": false,
+                "generator": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 36,
+                    "end": 39,
+                    "name": "res"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 43,
+                  "end": 96,
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 49,
+                      "end": 69,
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 49,
+                        "end": 69,
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 49,
+                          "end": 61,
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 49,
+                            "end": 53
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 54,
+                            "end": 61,
+                            "name": "loading"
+                          },
+                          "computed": false,
+                          "optional": false
+                        },
+                        "right": {
+                          "type": "Literal",
+                          "start": 64,
+                          "end": 69,
+                          "value": false,
+                          "raw": "false"
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 74,
+                      "end": 92,
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 74,
+                        "end": 92,
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 74,
+                          "end": 90,
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 74,
+                            "end": 78
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 79,
+                            "end": 90,
+                            "name": "handleClose"
+                          },
+                          "computed": false,
+                          "optional": false
+                        },
+                        "arguments": [],
+                        "optional": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "optional": false
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 98,
+            "end": 103,
+            "name": "catch"
+          },
+          "computed": false,
+          "optional": false
+        },
+        "arguments": [
+          {
+            "type": "ArrowFunctionExpression",
+            "start": 104,
+            "end": 140,
+            "id": null,
+            "expression": false,
+            "generator": false,
+            "async": false,
+            "params": [],
+            "body": {
+              "type": "BlockStatement",
+              "start": 110,
+              "end": 140,
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "start": 116,
+                  "end": 136,
+                  "expression": {
+                    "type": "AssignmentExpression",
+                    "start": 116,
+                    "end": 136,
+                    "operator": "=",
+                    "left": {
+                      "type": "MemberExpression",
+                      "start": 116,
+                      "end": 128,
+                      "object": {
+                        "type": "ThisExpression",
+                        "start": 116,
+                        "end": 120
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "start": 121,
+                        "end": 128,
+                        "name": "loading"
+                      },
+                      "computed": false,
+                      "optional": false
+                    },
+                    "right": {
+                      "type": "Literal",
+                      "start": 131,
+                      "end": 136,
+                      "value": false,
+                      "raw": "false"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "optional": false
+      }
+    }
+  ],
+  "sourceType": "module"
+}
