@@ -1,13 +1,15 @@
 {
-  "dependencies": {
-    "recast": "^0.21.5"
-  },
+  "dependencies": {},
   "name": "chenyaya-promise-catch-loader",
-  "version": "1.0.0",
-  "main": "src/index.js",
-  "devDependencies": {},
+  "version": "1.0.1",
+  "module": "./dist/lib.esm.js",
+  "devDependencies": {
+    "recast": "^0.21.5",
+    "rollup": "^3.6.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarn run rollup -c --bundleConfigAsCjs"
   },
   "author": "",
   "license": "ISC",

@@ -1,4 +1,3 @@
-
 /**
  * transform
  * 
@@ -41,29 +40,29 @@ const {
   blockStatement,
   memberExpression,
   callExpression
-} = recast.types.builders
-const t = recast.types.namedTypes
+} = recast.types.builders;
+const t = recast.types.namedTypes;
 
 module.exports = function (source) {
   // parser替换：默认的解析器为 recast/parsers/esprima，一般我们项目中都会用到 babel-loader
   const ast = recast.parse(source,{
     parse:require('recast/parsers/babel')
-  })
+  });
 
   recast.visit(ast, {
     visitCallExpression (path) {
       
-      const { node } = path
-      const args = node.arguments
-      let firstExp
+      const { node } = path;
+      const args = node.arguments;
+      let firstExp;
   
       args.forEach(item => {
         // 保存箭头函数
         if (t.ArrowFunctionExpression.check(item)) {
-          firstExp = item.body.body[0]
+          firstExp = item.body.body[0];
           console.log('visit',t.ExpressionStatement.check(firstExp) &&
           t.Identifier.check(node.callee.property) &&
-          node.callee.property.name === 'then',t.Identifier.check(node.callee.property),node.callee.property.name)
+          node.callee.property.name === 'then',t.Identifier.check(node.callee.property),node.callee.property.name);
           // 函数存在 && 调用callExpresion为then
           if (
             t.ExpressionStatement.check(firstExp) &&
@@ -71,18 +70,18 @@ module.exports = function (source) {
             node.callee.property.name === 'then'
           ) {
             // console.log('visitCallExpression',node.callee.property.name,firstExp)
-            const arrowFunc = arrowFunctionExpression([], blockStatement([firstExp]))
-            const originFunc = callExpression(node.callee, node.arguments)
-            const catchFunc = callExpression(id('catch'), [arrowFunc])
-            const newFunc = memberExpression(originFunc, catchFunc)
+            const arrowFunc = arrowFunctionExpression([], blockStatement([firstExp]));
+            const originFunc = callExpression(node.callee, node.arguments);
+            const catchFunc = callExpression(id('catch'), [arrowFunc]);
+            const newFunc = memberExpression(originFunc, catchFunc);
     
-            path.replace(newFunc)
+            path.replace(newFunc);
           }
         }
-      })
+      });
       return false
     }
-  })
+  });
 
   return recast.print(ast).code
-}
+};
